@@ -26,7 +26,7 @@ public class Calculate {
     if (size < 10) {
       return total * size;
     } else if (size >= 10) {
-      return total * size * 9 / 10;
+      return (int) (total * size * 0.9);
     }
 
     return -1;
