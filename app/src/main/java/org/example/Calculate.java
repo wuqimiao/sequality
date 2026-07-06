@@ -6,29 +6,25 @@ public class Calculate {
   }
 
   public int getIndividualFee(int age) {
+    int fee = 0;
     if (age < 13) {
-      return 1000;
+      fee = 1000;
     } else if (age >= 13) {
-      return 2000;
+      fee = 2000;
     }
 
-    return -1;
+    return fee;
   }
 
   public int getTotalFee(int age, int size) {
     int total = 0;
-    if (age <= 12) {
-      total = 1000;
-    } else if (age >= 13) {
-      total = 2000;
-    }
 
     if (size < 10) {
-      return total * size;
+      total = getIndividualFee(age) * size;
     } else if (size >= 10) {
-      return (int) (total * size * 0.9);
+      total = getIndividualFee(age) * size * 9 / 10;
     }
 
-    return -1;
+    return total;
   }
 }
