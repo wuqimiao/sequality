@@ -10,4 +10,18 @@ public class CalculateTest {
     int expected = 5;
     assertEquals(expected, calculate.sum(2, 3));
   }
+
+  @Test
+  public void testGetIndividualFee() {
+    Calculate calculate = new Calculate();
+    int expected = 2000;
+    assertEquals(expected, calculate.getIndividualFee(13));
+  }
+
+  @Test
+  public void testGetTotalFee() {
+    Calculate calculate = new Calculate();
+    int expected = 9900;
+    assertEquals(expected, calculate.getTotalFee(12, 10));
+  }
 }
