@@ -28,9 +28,7 @@ public class App {
 
   public static void main(String[] args) {
     System.out.println(new App().getGreeting());
-    printResult(10, 1);
-    printResult(25, 1);
-    printResult(10, 15);
-    printResult(25, 15);
+    printResult(12, 9);
+    printResult(13, 10);
   }
 }
